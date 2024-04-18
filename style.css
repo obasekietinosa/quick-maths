@@ -1,7 +1,40 @@
+@import url(https://fonts.bunny.net/css?family=acme:400);
+
+:root {
+  --bg-colour: #FFEAA0;
+  --fg-colour: #211A1E;
+  --primary: #7CDF64;
+  --secondary: #648767;
+}
+
+body {
+  background-color: var(--bg-colour);
+  background-image: url("/bg.jpg");
+  background-size: contain;
+  color: var(--fg-colour);
+  font-family: 'Acme', sans-serif;
+  text-align: center;
+}
+
 section {
   display: none;
 }
 
 section.active {
   display: block
+}
+
+h1 {
+  font-weight: 900;
+}
+
+button {
+  padding: 16px 32px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: var(--primary);
+  box-shadow: var(--secondary) 2px 4px;
+  border: none;
+  cursor: pointer;
 }

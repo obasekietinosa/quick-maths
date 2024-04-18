@@ -56,11 +56,13 @@ const LENGTH_OF_NUMBERS = 10;
       const correctAnswer = numbers.reduce((sum, n) => sum + n, 0);
       console.log(correctAnswer, answer, numbers);
       if (parseInt(answer, 10) === correctAnswer) {
-        document.querySelector("#headline").innerHTML = "You Won";
+        switchActiveSectionTo("results-correct");
       } else {
-        document.querySelector("#headline").innerHTML = "You Lost";
+        switchActiveSectionTo("results-incorrect");
+        document.querySelector("#correctAnswer").innerHTML = correctAnswer;
+        document.querySelector("#subtext").innerHTML = answer > correctAnswer ? "Your answer was too high" : "Your answer was too low";
+        document.querySelector("#yourNumbers").innerHTML = numbers.join(", ");
       }
-      switchActiveSectionTo("results");
     }
     const resetGame = () => {
       window.location.reload();
