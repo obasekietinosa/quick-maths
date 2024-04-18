@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Maths | Add the numbers in your head and see if correct</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Quick Maths</h1>
+      <p>
+        Numbers show up, add them and then put in what you think the right
+        answer is
+      </p>
+    </header>
+    <main>
+      <section id="intro" class="active">
+        <h3>Get started</h3>
+        <p>Hit the button below to start playing</p>
+        <button id="playNow">Play Now!</button>
+      </section>
+      <section id="numbers">
+        <h3 id="currentNumber"></h3>
+      </section>
+      <section id="yourInput">
+        <h3>What is the sum of all the numbers you saw?</h3>
+        <form id="sumForm">
+          <input type="number" id="sum" name="sum" />
+          <button type="submit">Submit!</button>
+        </form>
+      </section>
+      <section id="results">
+        <h3 id="headline"></h3>
+        <button id="playAgain">Play Again!</button>
+      </section>
+    </main>
+  </body>
+  <script src="/index.js">
+  </script>
+</html>
