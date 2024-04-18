@@ -1,11 +1,17 @@
 const LENGTH_OF_NUMBERS = 10;
     const MAX_NUMBER = 10;
     const INTERVAL = 1_500;
-    const numbers = [];
+    let numbers = [];
 
     document.querySelector("#playNow").addEventListener("click", (event) => {
       startGame();
     });
+
+    document.querySelectorAll(".resetGame").forEach(e => (
+      e.addEventListener("click", (event) => {
+        resetGame();
+      })
+    ));
 
     const sumForm = document.querySelector("form#sumForm");
 
@@ -39,6 +45,7 @@ const LENGTH_OF_NUMBERS = 10;
     };
 
     const startGame = () => {
+      numbers = [];
       switchActiveSectionTo("numbers");
 
       const interval = setInterval(() => {
@@ -63,5 +70,7 @@ const LENGTH_OF_NUMBERS = 10;
       }
     }
     const resetGame = () => {
-      window.location.reload();
+      // window.location.reload();
+      numbers = [];
+      switchActiveSectionTo("intro")
     }
