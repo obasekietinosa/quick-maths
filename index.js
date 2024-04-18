@@ -6,10 +6,6 @@ const LENGTH_OF_NUMBERS = 10;
     document.querySelector("#playNow").addEventListener("click", (event) => {
       startGame();
     });
-    
-    document.querySelector("#playAgain").addEventListener("click", (event) => {
-      resetGame();
-    });
 
     const sumForm = document.querySelector("form#sumForm");
 
@@ -39,17 +35,19 @@ const LENGTH_OF_NUMBERS = 10;
       const number = Math.floor(Math.random() * (MAX_NUMBER + 1)) * coefficient;
       numbers.push(number);
       document.querySelector("#currentNumber").innerHTML = number;
+      console.log({number});
     };
 
     const startGame = () => {
       switchActiveSectionTo("numbers");
 
       const interval = setInterval(() => {
-        addNewNumber();
-        if (numbers.length === LENGTH_OF_NUMBERS) {
+        if (numbers.length < LENGTH_OF_NUMBERS) {
+          addNewNumber();
+          return;
+        }
           clearInterval(interval);
           switchActiveSectionTo("yourInput")
-        }
       }, INTERVAL);
     };
     const endGame = (answer) => {
