@@ -40,8 +40,8 @@ const LENGTH_OF_NUMBERS = 10;
       const coefficient = Math.floor(Math.random() * 2) === 0 ? 1 : -1;
       const number = Math.floor(Math.random() * (MAX_NUMBER + 1)) * coefficient;
       numbers.push(number);
-      document.querySelector("#currentNumber").innerHTML = number;
-      console.log({number});
+      const element = document.querySelector("#currentNumber");
+      element.innerHTML = `<h3 class="animate__animated animate__bounceIn">${number}</h3>`;
     };
 
     const startGame = () => {

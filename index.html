@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quick Maths | Add the numbers in your head and see if correct</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <header>
@@ -21,7 +25,9 @@
         <button id="playNow">Play Now!</button>
       </section>
       <section id="numbers">
-        <h3 id="currentNumber"></h3>
+        <div id="currentNumber">
+          <h3 class="animate__animated animate__infinite animate__bounceIn" id="currentNumber"></h3>
+        </div>
       </section>
       <section id="yourInput">
         <h3>What is the sum of all the numbers you saw?</h3>
@@ -36,13 +42,12 @@
       </section>
       <section id="results-incorrect">
         <h3 id="headline">You lost!</h3>
-        <p>The correct answer is <span id="correctAnswer"></p>
+        <p>The correct answer is <span id="correctAnswer"></span></p>
         <p id="subtext"></p>
         <p>The numbers you got were: <span id="yourNumbers"></span></p>
         <button class="resetGame">Play Again!</button>
       </section>
     </main>
   </body>
-  <script src="/index.js">
-  </script>
+  <script src="/index.js"></script>
 </html>

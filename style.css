@@ -38,3 +38,9 @@ button {
   border: none;
   cursor: pointer;
 }
+
+#currentNumber h3 {
+  font-size: 3rem;
+  margin: 16px 8px;
+  --animate-duration: 1.5s;
+}
